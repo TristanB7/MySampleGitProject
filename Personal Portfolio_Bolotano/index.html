@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Tristan Bolotano — projects, skills, and contact.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">TB</div>
+        <div>
+          <h1>Tristan Bolotano</h1>
+          <p class="lead">Front-end developer & student — I create clean, accessible web interfaces.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- INTRO -->
+      <section class="intro card" id="intro">
+        <h2>Hello — I’m Tristan</h2>
+        <p class="muted">
+          I build simple, responsive websites and small web apps.
+          I enjoy turning ideas into polished works using HTML, CSS, JavaScript, PHP, and SQL.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about">
+        <div class="card">
+          <h3>About Me</h3>
+          <p class="muted">
+            I'm a student passionate about front-end development. 
+            I like exploring in search of new tools and improving every project I work on. 
+          </p>
+
+          <h4>Skills</h4>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Git</span>
+            <span class="skill">SQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Hobbies & Interests</h3>
+          <ul class="muted">
+            <li>Gaming</li>
+            <li>Coding small projects</li>
+            <li>Watching movies</li>
+            <li>Reading fiction novels</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h3>Projects / Works</h3>
+        <div class="projects-grid">
+          <article class="project">
+            <h3>To-Do List</h3>
+            <p>A simple task manager with add, edit, and delete functions.  
+               Uses localStorage to keep tasks even after refreshing the page.</p>
+            <div class="tags">
+              <small class="muted">HTML</small>
+              <small class="muted">CSS</small>
+              <small class="muted">JavaScript</small>
+            </div>
+            <div><a href="#" onclick="openProject(event,'todo')">View demo</a></div>
+          </article>
+
+          <article class="project">
+            <h3>Simple Calculator</h3>
+            <p>A clean, responsive calculator that performs basic math operations.  
+               Focused on simple design and accessibility.</p>
+            <div class="tags">
+              <small class="muted">HTML</small>
+              <small class="muted">CSS</small>
+              <small class="muted">JavaScript</small>
+            </div>
+            <div><a href="#" onclick="openProject(event,'calculator')">View demo</a></div>
+          </article>
+
+          <article class="project">
+            <h3>Registration & Login</h3>
+            <p>A basic user registration and login system using PHP and SQL  
+               to handle account creation and secure authentication.</p>
+            <div class="tags">
+              <small class="muted">PHP</small>
+              <small class="muted">SQL</small>
+              <small class="muted">HTML/CSS</small>
+            </div>
+            <div><a href="#" onclick="openProject(event,'login')">View demo</a></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="contact-grid">
+          <div class="card">
+            <h4>Get in touch</h4>
+            <p class="muted">Email: <a href="mailto:tristan@gmail.com">tristan@gmail.com</a></p>
+            <p class="muted">Contact #: 0123-456-7890</p>
+            <p class="muted">Location: Philippines</p>
+          </div>
+
+          <div class="card">
+            <h4>Send a message</h4>
+            <form id="contactForm" onsubmit="handleContact(event)">
+              <label for="name">Name</label>
+              <input id="name" name="name" required>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <div class="form-actions">
+                <button class="btn" type="submit">Send</button>
+                <div id="formStatus" class="muted" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Tristan Bolotano — Built with HTML, CSS & JS.
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
